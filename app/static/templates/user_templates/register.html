@@ -1,0 +1,47 @@
+<div ng-controller="RegisterController">
+
+    <div class="wrapper">
+        <div class="container" style="padding-top: 25px;">
+
+            <section class="content">
+
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input type="text" class="form-control" ng-model="user.email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+
+                                <label for="exampleInputEmail1">First Name</label>
+                                <input type="text" class="form-control" ng-model="user.firstname" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLastName">Last Name</label>
+                                <input type="text" class="form-control" ng-model="user.lastname" placeholder="Password">
+
+                            </div>
+                            <div class="form-group">
+
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Re-Enter Password</label>
+                                <input type="password" class="form-control" id="form.confirm" name="confirm" placeholder="Password">
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9 pull-right">
+                <!--<input type="submit" value="Register" class="button green">-->
+                <button class="btn btn-default" ng-click="registerUser(user)">Submit</button>
+            </div>
+        </div>
+        </form>
+        </section>
+    </div>
+</div>
+</div>

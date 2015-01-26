@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<script data-main="js/app" src="../node_modules/require/require.js"></script>
+	<title>Flask-Angular_Skeleton</title>
+	<script src="/static/js/lib/angular/angular.js"></script>
+	<script src="/static/js/lib/angular/angular-route.js"></script>
+	<script src="/static/js/main.js"></script>
+	<script src="/static/js/user_controllers.js"></script>
+	<script src="/static/js/routes.js"></script>
+	<script src="/static/js/user_services.js"></script>
+	<base href="/">
 </head>
 <body>
-	
+	<a href="login/">Login</a>
+	<a href="register/">Register</a>
+	 <div ng-view></div>   
 </body>
 </html>
 

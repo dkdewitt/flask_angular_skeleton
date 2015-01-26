@@ -4,10 +4,17 @@ from flask.ext.httpauth import HTTPBasicAuth
 
 import os
 
+
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
 
 
 from app.users.api import mod as usersRestModule
 app.register_blueprint(usersRestModule)
+
+
+import views
+
+db.create_all()
