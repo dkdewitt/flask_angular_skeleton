@@ -1,0 +1,6 @@
+<div>
+	<a ng-if = "!isLoggedIn" ng-href="login/">Login</a>
+	<a ng-if = "isLoggedIn" ng-href="logout/">Logout</a>
+	<a href="register/">Register</a>
+	<span ng-if="isLoggedIn">[[userName]]</span>
+</div>

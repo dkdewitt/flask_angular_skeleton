@@ -1,9 +1,17 @@
 angular.module('userController', [])
 .controller('LoginController', function($scope, $http, $window, $location,userLoginService) {
   //Login Function
+  $scope.message = null;
   $scope.login = function (user) {
     userLoginService.login(user).then(function(d){
-      userLoginService.setApiKey(d.api_key);
+      if(d.data.hasOwnProperty('api_key')){
+        userLoginService.setApiKey(d.data.api_key);
+      }
+      else{
+        $scope.message = d.data.message;
+      }
+      console.log(d);
+      
     })
   };
   $scope.logout = function(){

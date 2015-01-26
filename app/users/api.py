@@ -1,7 +1,7 @@
 
 from flask import Flask, Blueprint, request, render_template, flash, g, session, redirect, url_for, jsonify, json
 from flask.ext.restful import Resource, Api,reqparse, fields, marshal_with, marshal
-from app.users.models import User
+from app.users.models import User, verify_password
 from app import db, app, auth
 #api = Blueprint('api', __name__)
 
@@ -39,7 +39,7 @@ class LoginResource(Resource):
             #login_user(user)
             return p
         else:
-            return ''
+            return {'message' : 'Unable to login. Please Try Again.'}
 
 api.add_resource(LoginResource,  '/api/users/',  '/api/users/<user_id>')
 

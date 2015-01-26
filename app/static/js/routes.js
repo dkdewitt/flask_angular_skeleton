@@ -20,11 +20,7 @@ angular.module('routes', ["ngRoute"])
 
 
     .when('/logout', {template: ' ', controller: 'LogoutController',})  
-    .when('/', {
-            templateUrl: '/static/templates/home.html',
-           
 
-    })
 
     .otherwise({
        redirectTo: '/',  
