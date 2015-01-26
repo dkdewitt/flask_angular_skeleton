@@ -6,7 +6,7 @@ import os
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = ''
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://pylync:12#$QWer@127.0.0.1/flask_skeleton'
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
 
