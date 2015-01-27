@@ -12,6 +12,6 @@ from app import app
 @app.route('/login/')
 
 def index(entity_id=''):
-    #if session['user_id'] is None:
+
 
     return make_response(open('app/templates/base.html').read())

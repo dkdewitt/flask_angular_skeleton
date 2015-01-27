@@ -3,7 +3,7 @@ from flask import Flask, Blueprint, request, render_template, flash, g, session,
 from flask.ext.restful import Resource, Api,reqparse, fields, marshal_with, marshal
 from app.users.models import User, verify_password
 from app import db, app, auth
-#api = Blueprint('api', __name__)
+
 
 from werkzeug import check_password_hash, generate_password_hash
 
